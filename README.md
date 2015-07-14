@@ -39,8 +39,14 @@ The noir side of things is just as simple. All you do is declare a remote using 
            {:username "Chris"
             :age 24})
 
-(server/start 8080)
 ```
+*DO NOT FORGET SET anti-forgery to false*
+
+````clojure
+(assoc-in site-defaults [:security :anti-forgery] false)
+````
+
+
 
 ## License
 
